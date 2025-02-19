@@ -51,7 +51,7 @@ if (!avatar) {
     throw new ApiErrors(409,"Avatar file is required")
 }
 
-const User = await User.create({
+const user = await User.create({
     fullname,
     avatar : avatar.url,
     coverImage :coverImage?.url || "",
