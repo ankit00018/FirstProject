@@ -9,6 +9,7 @@ dotenv.config({
 
 const app = express();
 
+
 app.use(cors({
     origin: process.env.CORS_ORIGIN,
     credentials: true
@@ -20,17 +21,14 @@ app.use(express.static("public"));
 app.use(cookieParser());
 
 // Import routes
-import userRouter from "./routes/user.routes.js";
 
-if (userRouter) {
-    console.log("✅ User Router imported successfully!");
-} else {
-    console.log("❌ Failed to import User Router.");
-}
+import userRouter from "./routes/user.routes.js"
 
-// Mount routes
-console.log("🚀 Mounting user routes at /api/v1/users...");
-app.use("/api/v1/users", userRouter);
-console.log("✅ User routes mounted successfully!");
+// router declaration
+
+app.use("/api/v1/users", userRouter)
+
+
+// http://localhost:8000/api/v1/users/register 
 
 export { app };
