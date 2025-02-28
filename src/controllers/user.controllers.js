@@ -193,7 +193,7 @@ try {
     throw new ApiErrors(401,"invalid refresh token")
   }
   
-  if (incomingRefreshToken !== refreshToken) {
+  if (incomingRefreshToken !== user.refreshToken) {
     throw new ApiErrors(401,"Refresh token is expired or used")
   }
   
