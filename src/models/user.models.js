@@ -25,13 +25,13 @@ const userSchema =  new Schema({
         trim:true,
         index:true
     },
-    avatar:{
-        type:String,  //cloudinary url
-        required:true
-    },
-    coverImage:{
-        type:String,  //cloudinary url
-    },
+    // avatar:{
+    //     type:String,  //cloudinary url
+    //     required:true
+    // },
+    // coverImage:{
+    //     type:String,  //cloudinary url
+    // },
     watchHistrory:[
         {
         type:mongoose.Schema.Types.ObjectId,
